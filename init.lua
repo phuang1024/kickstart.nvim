@@ -843,7 +843,60 @@ require('lazy').setup {
       require('nvim-tree').setup {}
     end,
   },
+
+  {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function()
+      vim.g.barbar_auto_setup = false
+    end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
+
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    config = true,
+  },
+
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        theme = 'hyper',
+        config = {
+          week_header = {
+            enable = true,
+          },
+          shortcut = {
+            { desc = 'New file', action = 'enew', key = 'n' },
+            { desc = 'Lazy', action = 'Lazy', key = 'l' },
+            { desc = 'Mason', action = 'Mason', key = 'm' },
+          },
+        },
+      }
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+  },
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+vim.keymap.set('n', '<C-b>', '<cmd>NvimTreeToggle<CR>')
+
+vim.keymap.set('n', '\\', '<cmd>ToggleTerm direction=horizontal<CR>')
+vim.keymap.set('n', '<C-\\>', '<cmd>ToggleTerm direction=float<CR>')

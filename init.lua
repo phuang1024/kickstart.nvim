@@ -899,4 +899,5 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<C-b>', '<cmd>NvimTreeToggle<CR>')
 
 vim.keymap.set('n', '\\', '<cmd>ToggleTerm direction=horizontal<CR>')
+vim.keymap.set('n', '<M-\\>', '<cmd>ToggleTerm direction=vertical size=80<CR>')
 vim.keymap.set('n', '<C-\\>', '<cmd>ToggleTerm direction=float<CR>')

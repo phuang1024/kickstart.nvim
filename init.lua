@@ -603,6 +603,7 @@ require('lazy').setup {
     end,
   },
 
+  --[[
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
@@ -622,6 +623,7 @@ require('lazy').setup {
       },
     },
   },
+  --]]
 
   { -- Autocompletion
     'hrsh7th/nvim-cmp',

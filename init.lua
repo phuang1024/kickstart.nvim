@@ -875,15 +875,46 @@ require('lazy').setup {
     event = 'VimEnter',
     config = function()
       require('dashboard').setup {
-        theme = 'hyper',
+        theme = 'doom',
         config = {
-          week_header = {
-            enable = true,
+          header = {
+            '',
+            '',
+            '',
+            ' _____                                                              _____ ',
+            '( ___ )                                                            ( ___ )',
+            ' |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   | ',
+            ' |   |                                                              |   | ',
+            ' |   |                                                              |   | ',
+            ' |   |                                                              |   | ',
+            ' |   |      ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗      |   | ',
+            ' |   |      ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║      |   | ',
+            ' |   |      ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║      |   | ',
+            ' |   |      ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║      |   | ',
+            ' |   |      ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║      |   | ',
+            ' |   |      ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝      |   | ',
+            ' |   |                                                              |   | ',
+            ' |   |                                                              |   | ',
+            ' |   |                                                              |   | ',
+            ' |___|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|___| ',
+            '(_____)                                                            (_____)',
+            '',
+            '',
+            '',
+            '',
+            '',
           },
-          shortcut = {
-            { desc = 'New file', action = 'enew', key = 'n' },
-            { desc = 'Lazy', action = 'Lazy', key = 'l' },
-            { desc = 'Mason', action = 'Mason', key = 'm' },
+          center = {
+            { desc = 'new file', action = 'enew', key = 'n' },
+            { desc = 'plugins', action = 'Lazy', key = 'p' },
+            { desc = 'lsp', action = 'Mason', key = 'l' },
+            { desc = 'quit', action = 'q', key = 'q' },
+          },
+          footer = {
+            '',
+            '',
+            '',
+            'curiosity - subtlety - memory - reasonability',
           },
         },
       }

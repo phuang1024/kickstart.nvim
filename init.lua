@@ -898,7 +898,7 @@ require('lazy').setup {
             os.date('%A, %B %d'):lower(),
             os.date('%H:%M:%S'),
             '',
-            'cwd: ' .. os.getenv('HOME'),
+            'cwd: ' .. io.popen("pwd"):read(),
           },
         },
       }

@@ -911,7 +911,7 @@ require('lazy').setup {
     opts = {},
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
-  }
+  },
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

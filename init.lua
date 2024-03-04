@@ -928,3 +928,7 @@ vim.keymap.set('n', '<C-\\>', '<cmd>ToggleTerm direction=float<CR>')
 
 vim.keymap.set('n', '<leader>td', '<cmd>colorscheme tokyonight-night<CR>')
 vim.keymap.set('n', '<leader>tl', '<cmd>colorscheme tokyonight-day<CR>')
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true

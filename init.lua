@@ -408,7 +408,7 @@ require('lazy').setup {
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      -- { 'j-hui/fidget.nvim', opts = {} },
     },
     config = function()
       -- Brief Aside: **What is LSP?**
@@ -905,6 +905,13 @@ require('lazy').setup {
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   },
+
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

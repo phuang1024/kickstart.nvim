@@ -267,6 +267,7 @@ require('lazy').setup {
   -- after the plugin has been loaded:
   --  config = function() ... end
 
+  --[[
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VeryLazy', -- Sets the loading event to 'VeryLazy'
@@ -283,6 +284,7 @@ require('lazy').setup {
       }
     end,
   },
+  ]]--
 
   -- NOTE: Plugins can specify dependencies.
   --

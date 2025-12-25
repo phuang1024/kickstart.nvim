@@ -918,6 +918,20 @@ require('lazy').setup {
   },
 }
 
+local lspconfig = require("lspconfig")
+-- Set python.venvPath
+lspconfig.pyright.setup({
+  root_dir = lspconfig.util.root_pattern(".git"),
+  settings = {
+    python = {
+      analysis = {
+        venvPath = "/home/patrick/.miniconda3/envs",
+        venv = "general",
+      },
+    },
+  },
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
@@ -934,6 +948,8 @@ vim.keymap.set('n', '<leader>td', '<cmd>colorscheme tokyonight-night<CR>')
 vim.keymap.set('n', '<leader>tl', '<cmd>colorscheme tokyonight-day<CR>')
 
 vim.keymap.set('n', "<leader>'", '<cmd>s/\'/"/g<CR>')
+
+vim.keymap.set('n', ';', ':')
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
